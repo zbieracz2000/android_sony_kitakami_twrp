@@ -44,7 +44,6 @@ ENABLE_CPUSETS := true
 
 TARGET_NO_RADIOIMAGE := true
 TARGET_NO_BOOTLOADER := true
-TARGET_NO_RECOVERY := false
 TARGET_NO_KERNEL := false
 
 # Kernel properties
@@ -76,6 +75,7 @@ BOARD_KERNEL_CMDLINE += buildvariant=userdebug enforcing=0 androidboot.selinux=p
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_CACHEIMAGE_PARTITION_SIZE := 202211328
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 5257383936
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
 # Reserve space for data encryption (24239296512-16384)
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 24239280128
 
@@ -101,6 +101,7 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 # Recovery blobs
 TARGET_RECOVERY_DEVICE_MODULES := libbinder libgui libui libEGL libGLESv2 libsync tzdata
 TW_RECOVERY_ADDITIONAL_RELINK_FILES += $(TARGET_OUT)/usr/share/zoneinfo/tzdata
+TW_HAS_REBOOT_RECOVERY := true
 #TW_RECOVERY_ADDITIONAL_RELINK_FILES += \
 #    $(OUT)/system/lib64/libbinder.so $(OUT)/system/lib64/libgui.so \
 #    $(OUT)/system/lib64/libui.so $(OUT)/system/lib64/libEGL.so $(OUT)/system/lib64/libGLESv2.so \
