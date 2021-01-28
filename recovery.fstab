@@ -1,7 +1,7 @@
 # mount point    fstype    device                                         flags
 
 /boot            emmc      /dev/block/bootdevice/by-name/boot             flags=backup=1;display="Boot "Kernel"";
-/FOTAKernel      emmc      /dev/block/bootdevice/by-name/FOTAKernel       flags=backup=1;display="FOTAKernel "Recovery"";
+/recovery        emmc      /dev/block/bootdevice/by-name/FOTAKernel       flags=backup=1;display="FOTAKernel "Recovery"";
 
 /cache           ext4      /dev/block/bootdevice/by-name/cache
 /system          ext4      /dev/block/bootdevice/by-name/system           flags=display="System";mounttodecrypt;
