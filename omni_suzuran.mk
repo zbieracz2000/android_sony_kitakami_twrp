@@ -14,7 +14,7 @@
 # limitations under the License.
 
 # Release name
-PRODUCT_RELEASE_NAME := suuran
+PRODUCT_RELEASE_NAME := suzuran
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
